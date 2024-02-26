@@ -1,0 +1,265 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+a, a:link{
+    text-decoration: none;
+    color:#333333;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+/*######################## HEADER ###########################*/
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fff;
+}
+.logo img{
+    width: 300px;
+}
+nav{
+    width: 700px;
+}
+ul.gnb{
+    display: flex;
+}
+ul.gnb>li{
+    width:25%;
+    position: relative;
+}
+ul.gnb>li>a{
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 400ms;
+}
+ul.gnb>li:hover{
+    background: #0066ad;
+}
+ul.gnb>li:hover a{
+    color: #fff;
+}
+
+ul.lnb{
+    width: 100%;
+    position: absolute;
+    top : 35px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    text-align: center;
+    display: none;
+    background-color: #0066ad;
+    z-index: 5;
+}
+/* ul>.lnb>li{
+    width: 100%;
+    padding: 0 15px;
+} */
+ul.lnb>li:hover{
+    background: #30a3f3;
+}
+ul.lnb>li>a{
+    display: block;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 400ms;
+}
+
+
+
+/*######################## HERO ###########################*/
+.hero{
+    height: 300px;
+    overflow: hidden; /* 사진 하나빼고 안 보이게 */
+    position: relative;
+}
+.heroin{
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top: 0px; /* top 값을 -300 , -600px 로 주면 2번째 3번째 사진 나옴 */
+    left: 0;
+}
+.heroin img{
+    float: left;
+}
+
+/*######################## MAIN ###########################*/
+.main{
+    height: 200px;
+    display: flex;
+}
+.tabsbox{
+    width: 36%;
+    height: 200px;
+    padding-right: 10px;
+}
+.banner, .quick{
+    width: 32%;
+    height: 200px;
+}
+.tabnav{
+    display: flex;
+    margin-top: 4px;
+}
+.tabnav li{
+    background-color: #0066ad;
+    padding: 8px 20px;
+}
+.tabnav li a{
+    color: #333;
+}
+.tabnav li.active{
+    background-color: #30a3f3;
+}
+.tabnav li.active a{
+    color: #fff;
+    font-weight: bold;
+}
+.tab{
+    background-color: #0066ad;
+    padding: 15px 20px;
+    display: none;
+}
+.tab.active{
+    display: block;
+}
+.tab li{
+    font-size: 15px;
+}
+.tab li a{
+    color: #fff;
+}
+
+/*************** NOTICE ****************/
+#notice li{
+    border-bottom: 1px dashed #b9bbc7;
+    transition: all 300ms;
+}
+#notice li:hover{
+    background: #30a3f3;
+}
+#notice li a{
+    display: block;
+    line-height: 24px;
+}
+#gallery::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col{
+    float: left;
+    width: 33.3333%;
+    padding:12px 15px;
+}
+.col img{
+    max-width: 100%;
+}
+
+/*************** BANNER ****************/
+.banner{
+    width: 384px;
+}
+.banner img{
+    width: 97%;
+    height: 60px;
+    padding-top: 10px;
+}
+
+/*************** QUICK ****************/
+.quick{
+    width: 384px;
+    height: 200px;
+    padding: 30px;
+    padding-top: 50px;
+}
+.quick img{
+    width: 100px;
+    height: 100px;
+    padding-left: 5px;
+}
+
+
+
+/*######################## FOOTER ###########################*/
+footer{
+    width: 1200px;
+    height: 100px;
+    background: #0066ad;
+    color:#fff;
+}
+footer div{
+    float: left;
+}
+.ft-gnb{
+    width: 900px;
+    margin-top: 15px;
+}
+.ft-gnb a{
+    color: #fff;
+}
+.ft-gnb>ul>li{
+    float: left;
+    font-size: 13px;
+}
+.ft-gnb>ul>li::after{
+    content: " | ";
+    color: #30a3f3;
+    margin-right: 5px;
+}
+.ft-logo{
+    width: 300px;
+}
+.ft-logo img{
+    width: 300px;
+    padding: 20px;
+}
+.copyright{
+    width: 900px;
+    font-size: 14px;
+    align-items: center;
+}
+
+/*************** POPUP ****************/
+.popup{
+    width: 600px;
+    height: 500px;
+    border: 1px solid #eee;
+    position: fixed;
+    top: 180px;
+    left: calc(50% - 200px);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    padding: 30px;
+    display: none;
+}
+.close{
+    position: absolute;
+    padding: 5px 15px;
+    bottom: 20px;
+    left: 50%;    /* 버튼 위치 조정 */
+    transform: translateX(-50%);    /* 버튼 위치 조정 */
+}
